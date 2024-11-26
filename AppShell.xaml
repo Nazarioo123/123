@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Fitness_Diary.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Fitness_Diary.ContentPages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Fitness_Diary">
+
+    <TabBar>
+
+        <!--Tab 1: Dashboard-->
+        <Tab Title="Dashboard" Icon="dashboard.png">
+            <ShellContent 
+        ContentTemplate="{DataTemplate local:DashboardPage}" 
+        Route="DashboardPage" />
+        </Tab>
+        
+        <!--Tab 2: Workouts-->
+        <Tab Title="Workouts" Icon="workouts.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate local:WorkoutsPage}" 
+                Route="WorkoutsPage" />
+        </Tab>
+
+        <!-- Tab 3: Profil -->
+        <Tab Title="Profile" Icon="profile_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ProfilPage}" Route="ProfilPage" />
+        </Tab>
+
+    </TabBar>
+
+</Shell>
